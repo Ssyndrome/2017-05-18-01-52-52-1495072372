@@ -7,10 +7,10 @@ function main() {
 
 
 function arrMin(arr){
-    return Math.max.apply(null,arr);
+    return Math.min.apply(null,arr);
 }
 function arrMax(arr){
-    return Math.min.apply(null,arr);
+    return Math.max.apply(null,arr);
 }
 function arrAverage(arr){
     var sum = eval(arr.join("+"));
