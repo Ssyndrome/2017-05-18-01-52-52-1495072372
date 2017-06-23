@@ -27,5 +27,6 @@ module.exports = function main(input){
 		sum += input[m];
 	}
 	console.log("o) 平均值 = "+~~(sum/input.length*100)/100);
-	return;
+	//return;
 };
+main([6, 9, 15, -2, 92, 11]);
