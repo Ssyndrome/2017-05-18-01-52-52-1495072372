@@ -49,9 +49,9 @@ Array.prototype.avg = function () {
 
 var theArray=[6, 9, 15, -2, 92, 11];
 console.log( 
-`o) 最小值 = ${theArray.min()}`</br>
-`o) 最大值 = ${theArray.max()}`</br>
-`o) 元素数量 = ${theArray.length}`</br>
-`o) 平均值 = ${theArray.avg()}`
+"o) 最小值 = "+theArray.min()</br>
+"o) 最大值 = "+theArray.max()</br>
+"o) 元素数量 = "theArray.length</br>
+"o) 平均值 = "+theArray.avg()
 );
 };
