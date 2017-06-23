@@ -1,55 +1,23 @@
 "use strict";
-module.exports = function main(){
-var theArray = [6, 9, 15, -2, 92, 11];
-console.log(`o) 最小值 = ${theArray.min()}`);
-console.log(`o) 最大值 = ${theArray.max()}`);
-console.log(`o) 元素数量 = ${theArray.length}`);
-console.log(`o) 平均值 = ${theArray.avg()}`);
+module.exports = 
+function main() {
+    var a = [6, 9, 15, -2, 92, 11];
+    console.log(`o) 最小值 = ${arrMin(a)}`);
+	console.log(`o) 最大值 = ${arrMax(a)}`);
+	console.log(`o) 元素数量 = ${a.length}`);
+	console.log(`o) 平均值 = ${arrAverage(a)}`);
 };
 
-function cacl(arr, callback) {
-    var ret;
-    for (var i=0; i<arr.length;i++) {
-        ret = callback(arr[i], ret);
-    }
-    return ret;
+
+function arrMin(arr){
+    return Math.max.apply(null,arr);
+}
+function arrMax(arr){
+    return Math.min.apply(null,arr);
+}
+function arrAverage(arr){
+    var sum = eval(arr.join("+"));
+    return ~~(sum/arr.length*100)/100;
 }
 
-Array.prototype.max = function () {
-    return cacl(this, function (item, max) {
-        if (!(max > item)) {
-            return item;
-        }
-        else {
-            return max;
-        }
-    });
-};
-Array.prototype.min = function () {
-    return cacl(this, function (item, min) {
-        if (!(min < item)) {
-            return item;
-        }
-        else {
-            return min;
-        }
-    });
-};
-Array.prototype.sum = function () {
-    return cacl(this, function (item, sum) {
-        if (typeof (sum) == 'undefined') {
-            return item;
-        }
-        else {
-            return sum += item;
-        }
-    }
-	       );
-};
-Array.prototype.avg = function () {
-    if (this.length == 0) {
-        return 0;
-    }
-    return +~~(this.sum(this) / this.length*100)/100;
-};
 
