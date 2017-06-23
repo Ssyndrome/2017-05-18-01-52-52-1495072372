@@ -47,11 +47,11 @@ Array.prototype.avg = function () {
     return +~~(this.sum(this) / this.length*100)/100;
 };
 
-var theArray=[6, 9, 15, -2, 92, 11];
+var theArray = [6, 9, 15, -2, 92, 11];
 console.log( 
-"o) 最小值 = "+theArray.min()</br>
-"o) 最大值 = "+theArray.max()</br>
-"o) 元素数量 = "theArray.length</br>
+"o) 最小值 = "+theArray.min()+"<br>"+
+"o) 最大值 = "+theArray.max()+"<br>"+
+"o) 元素数量 = "theArray.length+"<br>"+
 "o) 平均值 = "+theArray.avg()
 );
 };
